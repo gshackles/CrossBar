@@ -1,9 +1,0 @@
-[submodule "Amarillo"]
-	path = Amarillo
-	url = https://github.com/gshackles/Amarillo.git
-	ignore = dirty
-
-[submodule "MvvmCross"]
-	path = MvvmCross
-	url = https://github.com/slodge/MvvmCross.git
-	ignore = dirty
