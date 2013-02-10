@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82855E67-CE55-4B4C-8AEF-A67AECA0A176}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CrossBar.Platform.Tests</RootNamespace>
+    <AssemblyName>CrossBar.Platform.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunitlite">
+      <HintPath>..\..\..\packages\NUnitLite.0.8.0\lib\net40\nunitlite.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\IMvxCommandExtensions.cs" />
+    <Compile Include="Extensions\TaskExtensions.cs" />
+    <Compile Include="Extensions\ViewModelExtensions.cs" />
+    <Compile Include="Mocks\MockAmarilloClient.cs" />
+    <Compile Include="Mocks\MockErrorReporter.cs" />
+    <Compile Include="Mocks\MockMvxViewDispatcher.cs" />
+    <Compile Include="Mocks\MockMvxViewDispatcherProvider.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceTests\SearchServiceTests.cs" />
+    <Compile Include="ServiceTests\ServiceTestsBase.cs" />
+    <Compile Include="ViewModelTests\MainMenuViewModelTests.cs" />
+    <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Amarillo\src\Amarillo\Amarillo.csproj">
+      <Project>{a123e111-8008-4369-bf8c-3bfde434d636}</Project>
+      <Name>Amarillo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
+      <Project>{b6e27475-e7d0-448c-a5cc-5097dca1e2dd}</Project>
+      <Name>Cirrious.MvvmCross</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Json\Cirrious.MvvmCross.Plugins.Json\Cirrious.MvvmCross.Plugins.Json.csproj">
+      <Project>{d518e8e6-3ce6-4706-a286-e8bc6a2f64dc}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\src\CrossBar.Platform\CrossBar.Platform.csproj">
+      <Project>{fa91bbf7-184f-4a6f-b609-7e58c91a3387}</Project>
+      <Name>CrossBar.Platform</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
