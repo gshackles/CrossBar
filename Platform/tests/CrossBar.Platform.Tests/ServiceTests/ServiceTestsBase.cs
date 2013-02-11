@@ -4,6 +4,7 @@ using System.Linq;
 using Amarillo;
 using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
+using CrossBar.Platform.Messaging.Messages;
 using CrossBar.Platform.Tests.Mocks;
 using NUnit.Framework;
 using TinyMessenger;
@@ -20,7 +21,8 @@ namespace CrossBar.Platform.Tests.ServiceTests
         protected MockAmarilloClient Client { get; private set; }
         protected ITinyMessengerHub MessengerHub { get; private set; }
         protected TService Service { get; private set; }
-
+        protected MockErrorReporter ErrorReporter { get; private set; }
+        
         [SetUp]
         public void SetUp()
         {
@@ -31,15 +33,19 @@ namespace CrossBar.Platform.Tests.ServiceTests
             var container = new TinyIoCProvider();
             var serviceProvider = new MvxServiceProvider(container);
 
+            ErrorReporter = new MockErrorReporter();
+            
             container.RegisterServiceInstance<IMvxServiceProviderRegistry>(serviceProvider);
             container.RegisterServiceInstance<IMvxServiceProvider>(serviceProvider);
             container.RegisterServiceInstance<IAmarillo>(Client);
-            container.RegisterServiceInstance<IErrorReporter>(new MockErrorReporter());
+            container.RegisterServiceInstance<IErrorReporter>(ErrorReporter);
 
             ContainerBootstrapper.Initialize(this);
 
             MessengerHub = container.GetService<ITinyMessengerHub>();
             Service = container.GetService<TService>();
+
+            MessengerHub.Subscribe<ErrorMessage>(msg => ErrorReporter.ReportError(msg.Message));
         }
     }
 }

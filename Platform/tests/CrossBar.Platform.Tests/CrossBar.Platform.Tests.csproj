@@ -56,6 +56,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTests\SearchServiceTests.cs" />
     <Compile Include="ServiceTests\ServiceTestsBase.cs" />
+    <Compile Include="ViewModelTests\BeerViewModelTests.cs" />
     <Compile Include="ViewModelTests\MainMenuViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>

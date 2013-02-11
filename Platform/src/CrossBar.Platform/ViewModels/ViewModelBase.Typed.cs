@@ -24,6 +24,6 @@ namespace CrossBar.Platform.ViewModels
             return RequestNavigate<TViewModel>(new Dictionary<string, object> { { ParametersBase.Key, json } });
         }
 
-        protected internal abstract void Initialize(TParameters parameters);
+        protected internal virtual void Initialize(TParameters parameters) { }
     }
 }

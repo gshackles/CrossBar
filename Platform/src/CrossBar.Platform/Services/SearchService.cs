@@ -25,7 +25,7 @@ namespace CrossBar.Platform.Services
             return MakeClientCall(() => _client.ListBeersAsync(query))
                 .ContinueWith(response =>
                                   {
-                                      if (response.Status == TaskStatus.RanToCompletion)
+                                      if (response.Status == TaskStatus.RanToCompletion && response.Result != null)
                                       {
                                           foreach (var beer in response.Result.Beers)
                                               _beerCache[beer.Id] = beer;
@@ -47,7 +47,7 @@ namespace CrossBar.Platform.Services
             return MakeClientCall(() => _client.GetBeerAsync(id))
                 .ContinueWith(response =>
                 {
-                    if (response.Status == TaskStatus.RanToCompletion)
+                    if (response.Status == TaskStatus.RanToCompletion && response.Result != null)
                     {
                         _beerCache[response.Result.Id] = response.Result;
 

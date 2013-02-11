@@ -27,6 +27,19 @@ namespace CrossBar.Platform.Tests.ServiceTests
         }
 
         [Test]
+        public void GetBeer_ErrorThrown_ReturnsNullAndReportsError()
+        {
+            Client.GetBeerAsyncResponse =
+                () => { throw new ApplicationException(); };
+
+            var result = Service.GetBeer(42).Test();
+
+            Assert.IsNull(result);
+            Assert.AreEqual(1, ErrorReporter.ErrorMessages.Count);
+            Assert.NotNull(ErrorReporter.ErrorMessages.First());
+        }
+
+        [Test]
         public void GetBeer_CalledTwiceForSameBeer_UsesCacheForSecondCall()
         {
             int beerId = 42;
@@ -56,6 +69,19 @@ namespace CrossBar.Platform.Tests.ServiceTests
             var result = Service.FindBeers(query).Test();
 
             Assert.AreEqual(beers, result);
+        }
+
+        [Test]
+        public void FindBeers_ErrorThrown_ReturnsNullAndReportsError()
+        {
+            Client.ListBeersAsyncResponse =
+                () => { throw new ApplicationException(); };
+
+            var result = Service.FindBeers("duff").Test();
+
+            Assert.IsNull(result);
+            Assert.AreEqual(1, ErrorReporter.ErrorMessages.Count);
+            Assert.NotNull(ErrorReporter.ErrorMessages.First());
         }
     }
 }

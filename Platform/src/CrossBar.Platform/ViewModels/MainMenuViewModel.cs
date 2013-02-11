@@ -20,8 +20,9 @@ namespace CrossBar.Platform.ViewModels
             get { return new MvxRelayCommand(() => Navigate<BeerSearchViewModel, EmptyParameters>(null));}
         }
 
-        protected internal override void Initialize(EmptyParameters parameters)
+        protected override bool RequiresLoading
         {
+            get { return false; }
         }
     }
 }

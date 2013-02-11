@@ -7,6 +7,7 @@ using Cirrious.MvvmCross.Platform;
 using Cirrious.MvvmCross.Plugins.Json;
 using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
+using CrossBar.Platform.Messaging.Messages;
 using CrossBar.Platform.Tests.Extensions;
 using CrossBar.Platform.Tests.Mocks;
 using CrossBar.Platform.ViewModels;
@@ -25,6 +26,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         protected MockAmarilloClient Client { get; private set; }
         protected ITinyMessengerHub MessengerHub { get; private set; }
         protected MockMvxViewDispatcher Dispatcher { get; private set; }
+        protected MockErrorReporter ErrorReporter { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -36,10 +38,12 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             _container = new TinyIoCProvider();
             var serviceProvider = new MvxServiceProvider(_container);
 
+            ErrorReporter = new MockErrorReporter();
+
             _container.RegisterServiceInstance<IMvxServiceProviderRegistry>(serviceProvider);
             _container.RegisterServiceInstance<IMvxServiceProvider>(serviceProvider);
             _container.RegisterServiceInstance<IAmarillo>(Client);
-            _container.RegisterServiceInstance<IErrorReporter>(new MockErrorReporter());
+            _container.RegisterServiceInstance<IErrorReporter>(ErrorReporter);
             _container.RegisterServiceType<IMvxJsonConverter, MvxJsonConverter>();
 
             ContainerBootstrapper.Initialize(this);
@@ -50,6 +54,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             _container.RegisterServiceInstance<IMvxViewDispatcherProvider>(mockNavigationProvider);
 
             MessengerHub = _container.GetService<ITinyMessengerHub>();
+            MessengerHub.Subscribe<ErrorMessage>(msg => ErrorReporter.ReportError(msg.Message));
         }
 
         protected TViewModel GetViewModel(TParameters parameters)
