@@ -1,19 +1,18 @@
 using System;
 using System.Threading;
 using CrossBar.Platform.ViewModels;
-using CrossBar.Platform.ViewModels.Parameters;
 
 namespace CrossBar.Platform.Tests.Extensions
 {
     public static class ViewModelExtensions
     {
-        public static void WaitUntilLoaded<TParameter>(this ViewModelBase<TParameter> viewModel) where TParameter : ParametersBase
+        public static void AllowToComplete(this bool loadingIndicator)
         {
-            const int maxWaitTime = 100;
+            const int maxWaitTime = 1000;
             const int increment = 10;
             int timer = 0;
 
-            while (timer < maxWaitTime && viewModel.IsLoading)
+            while (timer < maxWaitTime && loadingIndicator)
             {
                 timer += increment;
 
@@ -23,6 +22,11 @@ namespace CrossBar.Platform.Tests.Extensions
                 Thread.Sleep(increment);
 #endif
             }
+        }
+
+        public static void WaitUntilLoaded(this ViewModelBase viewModel)
+        {
+            viewModel.IsLoading.AllowToComplete();
         }
     }
 }

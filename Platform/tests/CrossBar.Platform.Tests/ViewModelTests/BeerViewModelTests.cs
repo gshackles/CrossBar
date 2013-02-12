@@ -39,7 +39,8 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             beerSearch.Query = "duffs";
             beerSearch.PropertyChanged += (s, e) => notifications.Add(e.PropertyName);
 
-            beerSearch.SearchCommand.ExecuteTest();
+            beerSearch.SearchCommand.Execute(null);
+            beerSearch.IsSearching.AllowToComplete();
 
             Assert.False(beerSearch.IsSearching);
             Assert.AreEqual(2, notifications.Where(notification => notification == "IsSearching").Count());
@@ -52,7 +53,8 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             var beerSearch = GetViewModel(null);
             var beer = new Beer {Id = 42, Name = "Duffs"};
 
-            beerSearch.SelectBeerCommand.ExecuteTest(beer);
+            beerSearch.SelectBeerCommand.Execute(beer);
+            beerSearch.IsSearching.AllowToComplete();
 
             Assert.AreEqual(1, Dispatcher.NavigateRequests.Count);
             Assert.That(Dispatcher.NavigateRequests.First().ViewModelType == typeof (BeerViewModel));
