@@ -38,6 +38,10 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\ThirdParty\SQLite\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Droid\SQLiteNet.cs">
+      <Link>RepositoryTests\SQLiteNet.cs</Link>
+    </Compile>
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Mocks\MockAmarilloClient.cs" />
@@ -53,6 +60,7 @@
     <Compile Include="Mocks\MockMvxViewDispatcherProvider.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryTests\FavoriteRepositoryTests.cs" />
     <Compile Include="ServiceTests\SearchServiceTests.cs" />
     <Compile Include="ServiceTests\ServiceTestsBase.cs" />
     <Compile Include="ViewModelTests\BeerSearchViewModelTests.cs" />
