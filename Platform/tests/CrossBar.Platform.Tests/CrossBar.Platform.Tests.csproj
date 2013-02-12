@@ -78,6 +78,10 @@
       <Project>{d518e8e6-3ce6-4706-a286-e8bc6a2f64dc}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Json</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
+      <Project>{72654b8a-5f78-4bdf-bfbb-057dddf314f1}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\CrossBar.Platform\CrossBar.Platform.csproj">
       <Project>{fa91bbf7-184f-4a6f-b609-7e58c91a3387}</Project>
       <Name>CrossBar.Platform</Name>

@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="Caching\LruCache.cs" />
     <Compile Include="CrossBarApplication.cs" />
+    <Compile Include="DataAccess\Entities\FavoriteBeer.cs" />
+    <Compile Include="DataAccess\Repositories\FavoriteRepository.cs" />
+    <Compile Include="DataAccess\Repositories\IFavoriteRepository.cs" />
     <Compile Include="IoC\ContainerBootstrapper.cs" />
     <Compile Include="IoC\TinyIoCProvider.cs" />
     <Compile Include="Messaging\IErrorReporter.cs" />
@@ -81,6 +84,10 @@
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Json\Cirrious.MvvmCross.Plugins.Json\Cirrious.MvvmCross.Plugins.Json.csproj">
       <Project>{d518e8e6-3ce6-4706-a286-e8bc6a2f64dc}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
+      <Project>{72654b8a-5f78-4bdf-bfbb-057dddf314f1}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
