@@ -3,7 +3,7 @@ using CrossBar.Platform.ViewModels.Parameters;
 
 namespace CrossBar.Platform.Tests.ViewModelTests
 {
-    public class BeerViewModelTests : ViewModelTestsBase<BeerViewModel, BeerParameters>
+    public class BreweryViewModelTests : ViewModelTestsBase<BreweryViewModel, BreweryParameters>
     {
     }
 }

@@ -5,30 +5,30 @@ using TinyMessenger;
 
 namespace CrossBar.Platform.ViewModels
 {
-    public class BeerViewModel : ViewModelBase<BeerParameters>
+    public class BreweryViewModel : ViewModelBase<BreweryParameters>
     {
         private readonly ISearchService _searchService;
 
-        public BeerViewModel(ITinyMessengerHub messengerHub, ISearchService searchService) 
+        public BreweryViewModel(ITinyMessengerHub messengerHub, ISearchService searchService)
             : base(messengerHub)
         {
             _searchService = searchService;
         }
 
-        private Beer _beer;
-        public Beer Beer
+        private Brewery _brewery;
+        public Brewery Brewery
         {
-            get { return _beer; }
-            set { _beer = value; RaisePropertyChanged(() => Beer); }
+            get { return _brewery; }
+            set { _brewery = value; RaisePropertyChanged(() => Brewery); }
         }
 
-        protected internal override void Initialize(BeerParameters parameters)
+        protected internal override void Initialize(BreweryParameters parameters)
         {
             _searchService
-                .GetBeer(parameters.BeerId)
+                .GetBrewery(parameters.BreweryId)
                 .ContinueWith(response =>
                                   {
-                                      Beer = response.Result;
+                                      Brewery = response.Result;
 
                                       FinishedLoading();
                                   });

@@ -20,6 +20,11 @@ namespace CrossBar.Platform.ViewModels
             get { return new MvxRelayCommand(() => Navigate<BeerSearchViewModel, EmptyParameters>(null));}
         }
 
+        public ICommand FindBreweriesCommand
+        {
+            get { return new MvxRelayCommand(() => Navigate<BrewerySearchViewModel, EmptyParameters>(null));}
+        }
+
         protected override bool RequiresLoading
         {
             get { return false; }

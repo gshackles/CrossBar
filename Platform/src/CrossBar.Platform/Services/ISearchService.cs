@@ -8,5 +8,7 @@ namespace CrossBar.Platform.Services
     {
         Task<IList<Beer>> FindBeers(string query);
         Task<Beer> GetBeer(int id);
+        Task<IList<Brewery>> FindBreweries(string query);
+        Task<Brewery> GetBrewery(int id);
     }
 }

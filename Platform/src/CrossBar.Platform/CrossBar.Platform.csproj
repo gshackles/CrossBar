@@ -59,8 +59,11 @@
     <Compile Include="ViewModelLocator.cs" />
     <Compile Include="ViewModels\BeerSearchViewModel.cs" />
     <Compile Include="ViewModels\BeerViewModel.cs" />
+    <Compile Include="ViewModels\BrewerySearchViewModel.cs" />
+    <Compile Include="ViewModels\BreweryViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\Parameters\BeerParameters.cs" />
+    <Compile Include="ViewModels\Parameters\BreweryParameters.cs" />
     <Compile Include="ViewModels\ViewModelBase.Typed.cs" />
     <Compile Include="ViewModels\Parameters\EmptyParameters.cs" />
     <Compile Include="ViewModels\Parameters\ParametersBase.cs" />

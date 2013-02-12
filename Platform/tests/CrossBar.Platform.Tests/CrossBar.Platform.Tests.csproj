@@ -45,7 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions\IMvxCommandExtensions.cs" />
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Mocks\MockAmarilloClient.cs" />
@@ -56,7 +55,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ServiceTests\SearchServiceTests.cs" />
     <Compile Include="ServiceTests\ServiceTestsBase.cs" />
+    <Compile Include="ViewModelTests\BeerSearchViewModelTests.cs" />
     <Compile Include="ViewModelTests\BeerViewModelTests.cs" />
+    <Compile Include="ViewModelTests\BrewerySearchViewModelTests.cs" />
+    <Compile Include="ViewModelTests\BreweryViewModelTests.cs" />
     <Compile Include="ViewModelTests\MainMenuViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>
