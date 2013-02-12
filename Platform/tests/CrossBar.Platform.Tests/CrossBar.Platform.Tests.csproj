@@ -22,6 +22,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -38,10 +39,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.SQLite, Version=1.0.84.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\ThirdParty\SQLite\System.Data.SQLite.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -49,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Droid\SQLiteNet.cs">
-      <Link>RepositoryTests\SQLiteNet.cs</Link>
-    </Compile>
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
     <Compile Include="Mocks\MockAmarilloClient.cs" />
@@ -61,6 +55,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryTests\FavoriteRepositoryTests.cs" />
+    <Compile Include="RepositoryTests\TemporarySQLiteConnectionFactory.cs" />
     <Compile Include="ServiceTests\SearchServiceTests.cs" />
     <Compile Include="ServiceTests\ServiceTestsBase.cs" />
     <Compile Include="ViewModelTests\BeerSearchViewModelTests.cs" />
@@ -86,6 +81,10 @@
       <Project>{d518e8e6-3ce6-4706-a286-e8bc6a2f64dc}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Json</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Console\Cirrious.MvvmCross.Plugins.Sqlite.Console.csproj">
+      <Project>{bc3b3b7f-f2a9-4310-b310-a80948f4bf72}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite.Console</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
       <Project>{72654b8a-5f78-4bdf-bfbb-057dddf314f1}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
@@ -94,6 +93,12 @@
       <Project>{fa91bbf7-184f-4a6f-b609-7e58c91a3387}</Project>
       <Name>CrossBar.Platform</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\..\..\ThirdParty\SQLite\sqlite3.dll">
+      <Link>sqlite3.dll</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

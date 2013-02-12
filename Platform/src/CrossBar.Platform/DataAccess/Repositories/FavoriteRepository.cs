@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Amarillo.Entities;
@@ -23,13 +22,13 @@ namespace CrossBar.Platform.DataAccess.Repositories
             }
         }
 
-        public Task<IEnumerable<FavoriteBeer>> ListFavoriteBeers()
+        public Task<List<FavoriteBeer>> ListFavoriteBeers()
         {
             return Task.Factory.StartNew(() =>
             {
                 using (var conn = _connectionFactory.Create(DatabaseName))
                 {
-                    return conn.Table<FavoriteBeer>().OrderBy(beer => beer.Name).AsEnumerable();
+                    return conn.Table<FavoriteBeer>().OrderBy(beer => beer.Name).ToList();
                 }
             });
         }
