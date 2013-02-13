@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Extensions\TaskExtensions.cs" />
     <Compile Include="Extensions\ViewModelExtensions.cs" />
+    <Compile Include="Mocks\InMemoryFavoriteRepository.cs" />
     <Compile Include="Mocks\MockAmarilloClient.cs" />
     <Compile Include="Mocks\MockErrorReporter.cs" />
     <Compile Include="Mocks\MockMvxViewDispatcher.cs" />

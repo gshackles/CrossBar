@@ -5,6 +5,7 @@ using Cirrious.MvvmCross.Interfaces.ServiceProvider;
 using Cirrious.MvvmCross.Interfaces.Views;
 using Cirrious.MvvmCross.Platform;
 using Cirrious.MvvmCross.Plugins.Json;
+using CrossBar.Platform.DataAccess.Repositories;
 using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
 using CrossBar.Platform.Messaging.Messages;
@@ -27,6 +28,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         protected ITinyMessengerHub MessengerHub { get; private set; }
         protected MockMvxViewDispatcher Dispatcher { get; private set; }
         protected MockErrorReporter ErrorReporter { get; private set; }
+        protected IFavoriteRepository FavoriteRepository { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -47,6 +49,9 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             _container.RegisterServiceType<IMvxJsonConverter, MvxJsonConverter>();
 
             ContainerBootstrapper.Initialize(this);
+
+            FavoriteRepository = new InMemoryFavoriteRepository();
+            _container.RegisterServiceInstance<IFavoriteRepository>(FavoriteRepository);
 
             Dispatcher = new MockMvxViewDispatcher();
             var mockNavigationProvider = new MockMvxViewDispatcherProvider();
