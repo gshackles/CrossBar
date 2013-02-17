@@ -65,6 +65,8 @@
     <Compile Include="ViewModelTests\BeerViewModelTests.cs" />
     <Compile Include="ViewModelTests\BrewerySearchViewModelTests.cs" />
     <Compile Include="ViewModelTests\BreweryViewModelTests.cs" />
+    <Compile Include="ViewModelTests\FavoriteBeersViewModelTests.cs" />
+    <Compile Include="ViewModelTests\FavoriteBreweriesViewModelTests.cs" />
     <Compile Include="ViewModelTests\MainMenuViewModelTests.cs" />
     <Compile Include="ViewModelTests\ViewModelTestsBase.cs" />
   </ItemGroup>

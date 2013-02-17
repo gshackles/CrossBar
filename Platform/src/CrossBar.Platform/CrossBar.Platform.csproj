@@ -67,6 +67,8 @@
     <Compile Include="ViewModels\BeerViewModel.cs" />
     <Compile Include="ViewModels\BrewerySearchViewModel.cs" />
     <Compile Include="ViewModels\BreweryViewModel.cs" />
+    <Compile Include="ViewModels\FavoriteBeersViewModel.cs" />
+    <Compile Include="ViewModels\FavoriteBreweriesViewModel.cs" />
     <Compile Include="ViewModels\MainMenuViewModel.cs" />
     <Compile Include="ViewModels\Parameters\BeerParameters.cs" />
     <Compile Include="ViewModels\Parameters\BreweryParameters.cs" />

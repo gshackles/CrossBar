@@ -25,6 +25,16 @@ namespace CrossBar.Platform.ViewModels
             get { return new MvxRelayCommand(() => Navigate<BrewerySearchViewModel, EmptyParameters>(null));}
         }
 
+        public ICommand ViewFavoriteBeersCommand
+        {
+            get { return new MvxRelayCommand(() => Navigate<FavoriteBeersViewModel, EmptyParameters>(null)); }
+        }
+
+        public ICommand ViewFavoriteBreweriesCommand
+        {
+            get { return new MvxRelayCommand(() => Navigate<FavoriteBreweriesViewModel, EmptyParameters>(null)); }
+        }
+
         protected override bool RequiresLoading
         {
             get { return false; }

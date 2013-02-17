@@ -30,5 +30,27 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             Assert.AreEqual(1, Dispatcher.NavigateRequests.Count);
             Assert.That(Dispatcher.NavigateRequests.First().ViewModelType == typeof(BrewerySearchViewModel));
         }
+
+        [Test]
+        public void ViewFavoriteBeersCommand_NavigatesToFavoriteBeersView()
+        {
+            var mainMenu = GetViewModel(null);
+
+            mainMenu.ViewFavoriteBeersCommand.Execute(null);
+
+            Assert.AreEqual(1, Dispatcher.NavigateRequests.Count);
+            Assert.That(Dispatcher.NavigateRequests.First().ViewModelType == typeof(FavoriteBeersViewModel));
+        }
+
+        [Test]
+        public void ViewFavoriteBreweriesCommand_NavigatesToFavoriteBreweriesView()
+        {
+            var mainMenu = GetViewModel(null);
+
+            mainMenu.ViewFavoriteBreweriesCommand.Execute(null);
+
+            Assert.AreEqual(1, Dispatcher.NavigateRequests.Count);
+            Assert.That(Dispatcher.NavigateRequests.First().ViewModelType == typeof(FavoriteBreweriesViewModel));
+        }
     }
 }
