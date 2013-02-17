@@ -7,16 +7,16 @@ using NUnit.Framework;
 namespace CrossBar.Platform.Tests.RepositoryTests
 {
     [TestFixture]
-    public class FavoriteRepositoryTests
+    public class FavoriteBeerRepositoryTests
     {
-        private IFavoriteRepository _favoriteRepository;
+        private IFavoriteBeerRepository _favoriteBeerRepository;
         private TemporarySQLiteConnectionFactory _connectionFactory;
 
         [SetUp]
         public void SetUp()
         {
             _connectionFactory = new TemporarySQLiteConnectionFactory();
-            _favoriteRepository = new FavoriteRepository(_connectionFactory);
+            _favoriteBeerRepository = new FavoriteBeerRepository(_connectionFactory);
         }
 
         [TearDown]
@@ -30,13 +30,13 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         {
             var beer = new Beer {Id = 42, Name = "Duff Dark"};
 
-            var fave = _favoriteRepository.SaveFavorite(beer).Test();
+            var fave = _favoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
             Assert.AreNotEqual(0, fave.Id);
             Assert.AreEqual(beer.Id, fave.BeerId);
             Assert.AreEqual(beer.Name, fave.Name);
 
-            var allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            var allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(1, allFaves.Count());
 
@@ -50,7 +50,7 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         [Test]
         public void ListFavoriteBeers_NothingSaved_ReturnsEmptyList()
         {
-            var allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            var allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(0, allFaves.Count());
         }
@@ -61,9 +61,9 @@ namespace CrossBar.Platform.Tests.RepositoryTests
             int numFaves = 5;
 
             for (int i = 0; i < numFaves; i++)
-                _favoriteRepository.SaveFavorite(new Beer { Id = 42, Name = "Duff Dark" }).Test();
+                _favoriteBeerRepository.SaveFavorite(42, "Duff Dark").Test();
 
-            var allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            var allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(numFaves, allFaves.Count());
         }
@@ -73,7 +73,7 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         {
             var beer = new Beer { Id = 42, Name = "Duff Dark" };
 
-            var fave = _favoriteRepository.CheckForFavorite(beer).Test();
+            var fave = _favoriteBeerRepository.CheckForFavorite(beer.Id).Test();
 
             Assert.IsNull(fave);
         }
@@ -83,13 +83,13 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         {
             var beer = new Beer { Id = 42, Name = "Duff Dark" };
 
-            var fave = _favoriteRepository.SaveFavorite(beer).Test();
+            var fave = _favoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
             Assert.AreNotEqual(0, fave.Id);
             Assert.AreEqual(beer.Id, fave.BeerId);
             Assert.AreEqual(beer.Name, fave.Name);
 
-            var checkedFavorite = _favoriteRepository.CheckForFavorite(beer).Test();
+            var checkedFavorite = _favoriteBeerRepository.CheckForFavorite(beer.Id).Test();
 
             Assert.AreEqual(fave.Id, checkedFavorite.Id);
             Assert.AreEqual(fave.BeerId, checkedFavorite.BeerId);
@@ -101,21 +101,21 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         {
             var beer = new Beer { Id = 42, Name = "Duff Dark" };
             
-            var fave = _favoriteRepository.SaveFavorite(beer).Test();
+            var fave = _favoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
-            var allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            var allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(1, allFaves.Count);
 
-            _favoriteRepository.RemoveFavorite(fave).Wait();
+            _favoriteBeerRepository.RemoveFavorite(fave).Wait();
 
-            allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(0, allFaves.Count);
 
-            _favoriteRepository.RemoveFavorite(fave).Wait();
+            _favoriteBeerRepository.RemoveFavorite(fave).Wait();
 
-            allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(0, allFaves.Count);
         }
@@ -125,15 +125,15 @@ namespace CrossBar.Platform.Tests.RepositoryTests
         {
             var beer = new Beer { Id = 42, Name = "Duff Dark" };
 
-            var fave = _favoriteRepository.SaveFavorite(beer).Test();
+            var fave = _favoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
-            var allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            var allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(1, allFaves.Count);
 
-            _favoriteRepository.RemoveFavorite(fave).Wait();
+            _favoriteBeerRepository.RemoveFavorite(fave).Wait();
 
-            allFaves = _favoriteRepository.ListFavoriteBeers().Test();
+            allFaves = _favoriteBeerRepository.ListFavoriteBeers().Test();
 
             Assert.AreEqual(0, allFaves.Count);
         }

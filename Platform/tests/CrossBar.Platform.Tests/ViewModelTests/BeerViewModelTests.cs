@@ -15,9 +15,9 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         public void ViewModelLoaded_BeerIsFavorite_MarkedAsFavorite()
         {
             var beer = getTestBeer();
-            FavoriteRepository.SaveFavorite(beer);
+            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name);
 
-            Assert.AreEqual(1, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(1, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
 
             var viewModel = getTestViewModel();
 
@@ -29,7 +29,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         {
             var viewModel = getTestViewModel();
 
-            Assert.AreEqual(0, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(0, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
             Assert.IsFalse(viewModel.IsFavorite);
         }
 
@@ -37,9 +37,9 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         public void ToggleFavoriteCommand_BeerIsFavorite_FavoriteIsRemoved()
         {
             var beer = getTestBeer();
-            FavoriteRepository.SaveFavorite(beer);
+            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name);
 
-            Assert.AreEqual(1, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(1, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
 
             var viewModel = getTestViewModel();
 
@@ -49,7 +49,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             viewModel.FavoriteOperationInProgress.AllowToComplete();
 
             Assert.IsFalse(viewModel.IsFavorite);
-            Assert.AreEqual(0, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(0, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
         }
 
         [Test]
@@ -58,13 +58,13 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             var viewModel = getTestViewModel();
 
             Assert.IsFalse(viewModel.IsFavorite);
-            Assert.AreEqual(0, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(0, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
 
             viewModel.ToggleFavoriteCommand.Execute(null);
             viewModel.FavoriteOperationInProgress.AllowToComplete();
 
             Assert.IsTrue(viewModel.IsFavorite);
-            Assert.AreEqual(1, FavoriteRepository.ListFavoriteBeers().Test().Count);
+            Assert.AreEqual(1, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
         }
 
         [Test]

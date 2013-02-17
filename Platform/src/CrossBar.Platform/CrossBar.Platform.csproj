@@ -46,8 +46,11 @@
     <Compile Include="Caching\LruCache.cs" />
     <Compile Include="CrossBarApplication.cs" />
     <Compile Include="DataAccess\Entities\FavoriteBeer.cs" />
-    <Compile Include="DataAccess\Repositories\FavoriteRepository.cs" />
-    <Compile Include="DataAccess\Repositories\IFavoriteRepository.cs" />
+    <Compile Include="DataAccess\Entities\FavoriteBrewery.cs" />
+    <Compile Include="DataAccess\Repositories\FavoriteBeerRepository.cs" />
+    <Compile Include="DataAccess\Repositories\FavoriteBreweryRepository.cs" />
+    <Compile Include="DataAccess\Repositories\IFavoriteBeerRepository.cs" />
+    <Compile Include="DataAccess\Repositories\IFavoriteBreweryRepository.cs" />
     <Compile Include="IoC\ContainerBootstrapper.cs" />
     <Compile Include="IoC\TinyIoCProvider.cs" />
     <Compile Include="Messaging\IErrorReporter.cs" />

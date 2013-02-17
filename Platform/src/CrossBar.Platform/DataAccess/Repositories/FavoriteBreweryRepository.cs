@@ -1,60 +1,59 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Amarillo.Entities;
-using CrossBar.Platform.DataAccess.Entities;
 using Cirrious.MvvmCross.Plugins.Sqlite;
+using CrossBar.Platform.DataAccess.Entities;
 
 namespace CrossBar.Platform.DataAccess.Repositories
 {
-    public class FavoriteRepository : IFavoriteRepository
+    public class FavoriteBreweryRepository : IFavoriteBreweryRepository
     {
         private readonly ISQLiteConnectionFactory _connectionFactory;
-        private const string DatabaseName = "Favorites.db";
+        private const string DatabaseName = "FavoriteBreweries.db";
 
-        public FavoriteRepository(ISQLiteConnectionFactory connectionFactory)
+        public FavoriteBreweryRepository(ISQLiteConnectionFactory connectionFactory)
         {
             _connectionFactory = connectionFactory;
 
             using (var conn = _connectionFactory.Create(DatabaseName))
             {
-                conn.CreateTable<FavoriteBeer>();
+                conn.CreateTable<FavoriteBrewery>();
             }
         }
 
-        public Task<List<FavoriteBeer>> ListFavoriteBeers()
+        public Task<List<FavoriteBrewery>> ListFavoriteBreweries()
         {
             return Task.Factory.StartNew(() =>
             {
                 using (var conn = _connectionFactory.Create(DatabaseName))
                 {
-                    return conn.Table<FavoriteBeer>().OrderBy(beer => beer.Name).ToList();
+                    return conn.Table<FavoriteBrewery>().OrderBy(brewery => brewery.Name).ToList();
                 }
             });
         }
 
-        public Task<FavoriteBeer> CheckForFavorite(Beer beer)
+        public Task<FavoriteBrewery> CheckForFavorite(int breweryId)
         {
             return Task.Factory.StartNew(() =>
             {
                 using (var conn = _connectionFactory.Create(DatabaseName))
                 {
-                    return conn.Table<FavoriteBeer>().SingleOrDefault(favorite => favorite.BeerId == beer.Id);
+                    return conn.Table<FavoriteBrewery>().SingleOrDefault(favorite => favorite.BreweryId == breweryId);
                 }
             });
         }
 
-        public Task<FavoriteBeer> SaveFavorite(Beer beer)
+        public Task<FavoriteBrewery> SaveFavorite(int breweryId, string breweryName)
         {
             return Task.Factory.StartNew(() =>
             {
                 using (var conn = _connectionFactory.Create(DatabaseName))
                 {
-                    var favorite = new FavoriteBeer
-                                       {
-                                           BeerId = beer.Id,
-                                           Name = beer.Name
-                                       };
+                    var favorite = new FavoriteBrewery
+                    {
+                        BreweryId = breweryId,
+                        Name = breweryName
+                    };
 
                     conn.Insert(favorite);
 
@@ -63,7 +62,7 @@ namespace CrossBar.Platform.DataAccess.Repositories
             });
         }
 
-        public Task RemoveFavorite(FavoriteBeer favorite)
+        public Task RemoveFavorite(FavoriteBrewery favorite)
         {
             return Task.Factory.StartNew(() =>
             {

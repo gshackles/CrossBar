@@ -28,7 +28,8 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         protected ITinyMessengerHub MessengerHub { get; private set; }
         protected MockMvxViewDispatcher Dispatcher { get; private set; }
         protected MockErrorReporter ErrorReporter { get; private set; }
-        protected IFavoriteRepository FavoriteRepository { get; private set; }
+        protected IFavoriteBeerRepository FavoriteBeerRepository { get; private set; }
+        protected IFavoriteBreweryRepository FavoriteBreweryRepository { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -50,8 +51,11 @@ namespace CrossBar.Platform.Tests.ViewModelTests
 
             ContainerBootstrapper.Initialize(this);
 
-            FavoriteRepository = new InMemoryFavoriteRepository();
-            _container.RegisterServiceInstance<IFavoriteRepository>(FavoriteRepository);
+            FavoriteBeerRepository = new InMemoryFavoriteBeerRepository();
+            _container.RegisterServiceInstance<IFavoriteBeerRepository>(FavoriteBeerRepository);
+
+            FavoriteBreweryRepository = new InMemoryFavoriteBreweryRepository();
+            _container.RegisterServiceInstance<IFavoriteBreweryRepository>(FavoriteBreweryRepository);
 
             Dispatcher = new MockMvxViewDispatcher();
             var mockNavigationProvider = new MockMvxViewDispatcherProvider();

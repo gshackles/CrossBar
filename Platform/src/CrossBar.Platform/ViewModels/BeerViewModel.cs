@@ -13,14 +13,14 @@ namespace CrossBar.Platform.ViewModels
     public class BeerViewModel : ViewModelBase<BeerParameters>
     {
         private readonly ISearchService _searchService;
-        private readonly IFavoriteRepository _favoriteRepository;
+        private readonly IFavoriteBeerRepository _favoriteBeerRepository;
         private FavoriteBeer _favorite;
 
-        public BeerViewModel(ITinyMessengerHub messengerHub, ISearchService searchService, IFavoriteRepository favoriteRepository) 
+        public BeerViewModel(ITinyMessengerHub messengerHub, ISearchService searchService, IFavoriteBeerRepository favoriteBeerRepository) 
             : base(messengerHub)
         {
             _searchService = searchService;
-            _favoriteRepository = favoriteRepository;
+            _favoriteBeerRepository = favoriteBeerRepository;
         }
 
         private Beer _beer;
@@ -70,8 +70,8 @@ namespace CrossBar.Platform.ViewModels
 
                                       FavoriteOperationInProgress = true;
 
-                                      _favoriteRepository
-                                          .CheckForFavorite(Beer)
+                                      _favoriteBeerRepository
+                                          .CheckForFavorite(Beer.Id)
                                           .ContinueWith(faveResponse =>
                                                             {
                                                                 FavoriteOperationInProgress = false;
@@ -90,7 +90,7 @@ namespace CrossBar.Platform.ViewModels
 
             if (IsFavorite)
             {
-                _favoriteRepository
+                _favoriteBeerRepository
                     .RemoveFavorite(_favorite)
                     .ContinueWith(response =>
                                       {
@@ -101,8 +101,8 @@ namespace CrossBar.Platform.ViewModels
             }
             else
             {
-                _favoriteRepository
-                    .SaveFavorite(Beer)
+                _favoriteBeerRepository
+                    .SaveFavorite(Beer.Id, Beer.Name)
                     .ContinueWith(response =>
                                       {
                                           _favorite = response.Result;

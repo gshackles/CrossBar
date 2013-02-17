@@ -1,15 +1,14 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Amarillo.Entities;
 using CrossBar.Platform.DataAccess.Entities;
 
 namespace CrossBar.Platform.DataAccess.Repositories
 {
-    public interface IFavoriteRepository
+    public interface IFavoriteBeerRepository
     {
         Task<List<FavoriteBeer>> ListFavoriteBeers();
-        Task<FavoriteBeer> CheckForFavorite(Beer beer);
-        Task<FavoriteBeer> SaveFavorite(Beer beer);
+        Task<FavoriteBeer> CheckForFavorite(int beerId);
+        Task<FavoriteBeer> SaveFavorite(int beerId, string beerName);
         Task RemoveFavorite(FavoriteBeer favorite);
     }
 }
