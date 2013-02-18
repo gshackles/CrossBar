@@ -11,7 +11,13 @@ namespace CrossBar.Platform.Tests.RepositoryTests
 
         public TemporarySQLiteConnectionFactory()
         {
-            _dirPath = Path.Combine(Directory.GetCurrentDirectory(), Guid.NewGuid().ToString());
+#if !__ANDROID__
+            string dbFolder = Directory.GetCurrentDirectory();
+#else
+            string dbFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+#endif
+
+            _dirPath = Path.Combine(dbFolder, Guid.NewGuid().ToString());
             Directory.CreateDirectory(_dirPath);
         }
 

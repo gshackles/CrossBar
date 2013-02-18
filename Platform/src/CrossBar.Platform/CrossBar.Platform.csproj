@@ -78,10 +78,6 @@
     <Compile Include="ViewModels\ViewModelBase.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Amarillo\src\Amarillo\Amarillo.csproj">
-      <Project>{a123e111-8008-4369-bf8c-3bfde434d636}</Project>
-      <Name>Amarillo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
       <Project>{b6e27475-e7d0-448c-a5cc-5097dca1e2dd}</Project>
       <Name>Cirrious.MvvmCross</Name>

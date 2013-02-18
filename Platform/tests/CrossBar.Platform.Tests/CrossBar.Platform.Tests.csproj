@@ -74,10 +74,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Amarillo\src\Amarillo\Amarillo.csproj">
-      <Project>{a123e111-8008-4369-bf8c-3bfde434d636}</Project>
-      <Name>Amarillo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
       <Project>{b6e27475-e7d0-448c-a5cc-5097dca1e2dd}</Project>
       <Name>Cirrious.MvvmCross</Name>
@@ -86,17 +82,9 @@
       <Project>{d518e8e6-3ce6-4706-a286-e8bc6a2f64dc}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Json</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Console\Cirrious.MvvmCross.Plugins.Sqlite.Console.csproj">
-      <Project>{bc3b3b7f-f2a9-4310-b310-a80948f4bf72}</Project>
-      <Name>Cirrious.MvvmCross.Plugins.Sqlite.Console</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
       <Project>{72654b8a-5f78-4bdf-bfbb-057dddf314f1}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\CrossBar.Platform\CrossBar.Platform.csproj">
-      <Project>{fa91bbf7-184f-4a6f-b609-7e58c91a3387}</Project>
-      <Name>CrossBar.Platform</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

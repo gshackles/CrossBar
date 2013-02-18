@@ -1,0 +1,90 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross", "MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj", "{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.Json", "MvvmCross\Cirrious\Plugins\Json\Cirrious.MvvmCross.Plugins.Json\Cirrious.MvvmCross.Plugins.Json.csproj", "{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.Sqlite", "MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj", "{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amarillo.Droid", "Amarillo\src\Amarillo.Droid\Amarillo.Droid.csproj", "{427D6331-E94D-4FDE-BB88-F3631BD601FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Droid", "MvvmCross\Cirrious\Cirrious.MvvmCross.Droid\Cirrious.MvvmCross.Droid.csproj", "{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.Sqlite.Droid", "MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Droid\Cirrious.MvvmCross.Plugins.Sqlite.Droid.csproj", "{E7909D1D-415A-4E35-8A08-8970BA605F2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.Platform.Droid", "Platform\src\CrossBar.Platform.Droid\CrossBar.Platform.Droid.csproj", "{B007915E-6A07-44DE-8D0D-C22784BAECAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Windows.Droid", "MvvmCross\PortableSupport\System.Windows\System.Windows.Droid.csproj", "{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.Platform.Tests.Droid", "Platform\tests\CrossBar.Platform.Tests.Droid\CrossBar.Platform.Tests.Droid.csproj", "{F308F314-494A-4C0E-8B70-0227A3DBBE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amarillo.IntegrationTests.Droid", "Amarillo\tests\Amarillo.IntegrationTests.Droid\Amarillo.IntegrationTests.Droid.csproj", "{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{427D6331-E94D-4FDE-BB88-F3631BD601FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{427D6331-E94D-4FDE-BB88-F3631BD601FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{427D6331-E94D-4FDE-BB88-F3631BD601FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{427D6331-E94D-4FDE-BB88-F3631BD601FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7909D1D-415A-4E35-8A08-8970BA605F2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7909D1D-415A-4E35-8A08-8970BA605F2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7909D1D-415A-4E35-8A08-8970BA605F2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7909D1D-415A-4E35-8A08-8970BA605F2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B007915E-6A07-44DE-8D0D-C22784BAECAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B007915E-6A07-44DE-8D0D-C22784BAECAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B007915E-6A07-44DE-8D0D-C22784BAECAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B007915E-6A07-44DE-8D0D-C22784BAECAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{427D6331-E94D-4FDE-BB88-F3631BD601FA} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{7A6BE137-D0F1-46A1-AE5C-81FAEEDDDF02} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{E7909D1D-415A-4E35-8A08-8970BA605F2F} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+	EndGlobalSection
+EndGlobal
