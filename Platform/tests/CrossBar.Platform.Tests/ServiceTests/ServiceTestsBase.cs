@@ -37,7 +37,7 @@ namespace CrossBar.Platform.Tests.ServiceTests
             
             container.RegisterServiceInstance<IMvxServiceProviderRegistry>(serviceProvider);
             container.RegisterServiceInstance<IMvxServiceProvider>(serviceProvider);
-            container.RegisterServiceInstance<IAmarillo>(Client);
+            container.RegisterServiceInstance<IAmarilloClient>(Client);
             container.RegisterServiceInstance<IErrorReporter>(ErrorReporter);
 
             ContainerBootstrapper.Initialize(this);

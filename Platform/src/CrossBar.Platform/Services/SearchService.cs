@@ -11,11 +11,11 @@ namespace CrossBar.Platform.Services
 {
     public class SearchService : ServiceBase, ISearchService
     {
-        private readonly IAmarillo _client;
+        private readonly IAmarilloClient _client;
         private readonly LruCache<int, Beer> _beerCache = new LruCache<int, Beer>(50);
-        private readonly LruCache<int, Brewery> _breweryCache = new LruCache<int, Brewery>(50); 
+        private readonly LruCache<int, Brewery> _breweryCache = new LruCache<int, Brewery>(50);
 
-        public SearchService(IAmarillo client, ITinyMessengerHub messengerHub)
+        public SearchService(IAmarilloClient client, ITinyMessengerHub messengerHub)
             : base(messengerHub)
         {
             _client = client;

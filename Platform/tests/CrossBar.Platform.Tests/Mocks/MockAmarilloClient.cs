@@ -7,7 +7,7 @@ using Amarillo.Payloads;
 
 namespace CrossBar.Platform.Tests.Mocks
 {
-    public class MockAmarilloClient : IAmarillo
+    public class MockAmarilloClient : IAmarilloClient
     {
         public Func<Response<Beer>> GetBeerAsyncResponse { get; set; }
         public Func<Response<BeerList>> ListBeersAsyncResponse { get; set; }

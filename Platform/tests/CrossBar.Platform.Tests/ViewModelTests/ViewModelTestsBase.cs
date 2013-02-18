@@ -45,7 +45,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
 
             _container.RegisterServiceInstance<IMvxServiceProviderRegistry>(serviceProvider);
             _container.RegisterServiceInstance<IMvxServiceProvider>(serviceProvider);
-            _container.RegisterServiceInstance<IAmarillo>(Client);
+            _container.RegisterServiceInstance<IAmarilloClient>(Client);
             _container.RegisterServiceInstance<IErrorReporter>(ErrorReporter);
             _container.RegisterServiceType<IMvxJsonConverter, MvxJsonConverter>();
 
