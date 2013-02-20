@@ -15,7 +15,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         public void ViewModelLoaded_BeerIsFavorite_MarkedAsFavorite()
         {
             var beer = getTestBeer();
-            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name);
+            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
             Assert.AreEqual(1, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
 
@@ -37,7 +37,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         public void ToggleFavoriteCommand_BeerIsFavorite_FavoriteIsRemoved()
         {
             var beer = getTestBeer();
-            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name);
+            FavoriteBeerRepository.SaveFavorite(beer.Id, beer.Name).Test();
 
             Assert.AreEqual(1, FavoriteBeerRepository.ListFavoriteBeers().Test().Count);
 
