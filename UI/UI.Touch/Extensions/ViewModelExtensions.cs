@@ -23,7 +23,6 @@ namespace CrossBar.UI.Touch.Extensions
 			var hud = new MTMBProgressHUD (view) 
 			{
 				LabelText = message,
-				//RemoveFromSuperViewOnHide = true,
 				DimBackground = true,
 				AnimationType = MBProgressHUDAnimation.MBProgressHUDAnimationZoomIn,
 				Mode = MBProgressHUDMode.Indeterminate,

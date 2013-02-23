@@ -11,24 +11,7 @@ namespace CrossBar.UI.Touch.Extensions
 	{
 		public static void ShowMessage(this UIViewController controller, string message) 
 		{
-			var hud = new MTMBProgressHUD (controller.View) 
-			{
-				LabelText = message,
-				RemoveFromSuperViewOnHide = true,
-				DimBackground = false,
-				AnimationType = MBProgressHUDAnimation.MBProgressHUDAnimationZoomIn,
-				Mode = MBProgressHUDMode.Text,
-				UserInteractionEnabled = true,
-			};
-			controller.View.AddSubview (hud);
-
-			hud.Show (true);
-
-			ThreadPool.QueueUserWorkItem (_ =>
-			{
-				Thread.Sleep(1500);
-				controller.InvokeOnMainThread(() => hud.Hide(animated: true));
-			});
+			controller.View.ShowMessage (message);
 		}
 
 		public static void OnViewWillAppear<TController> (this TController controller, ViewModelBase viewModel, Action loadedCallback)

@@ -31,7 +31,7 @@ namespace CrossBar.UI.Views
 				Results, 
                 UITableViewCellStyle.Default, 
                 new NSString ("BeerCell"),
-                "{'TitleText':{'Path':'Name'}}",
+                "TitleText Name",
            		UITableViewCellAccessory.DisclosureIndicator);
 			
 			source.SelectionChanged += (sender, e) => 
@@ -44,7 +44,8 @@ namespace CrossBar.UI.Views
             {
 				{ Search, "TouchUpInside SearchCommand"}, 
 				{ Query, "Text Query"}, 
-				{ source, "{'ItemsSource': {'Path':'Beers'}}"}
+				{ source, "ItemsSource Beers"},
+				{ Results, "Hidden Beers, Converter=CollectionEmptyConverter" }
 			});
 
 			Query.ShouldReturn = field => 
@@ -61,7 +62,7 @@ namespace CrossBar.UI.Views
 			{
 				if (e.PropertyName == "IsSearching")
 					InvokeOnMainThread (() => Query.ResignFirstResponder ());
-				else if (e.PropertyName == "Beers" && ViewModel.Beers.Count() == 0)
+				else if (e.PropertyName == "Beers" && (ViewModel.Beers != null && ViewModel.Beers.Count() == 0))
 					this.ShowMessage("No beers found :(");
 			};
 		}

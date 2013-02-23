@@ -134,10 +134,14 @@
       <Link>ViewModels\ViewModelBase.Typed.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\CrossBar.Platform\Converters\CollectionEmptyConverter.cs">
+      <Link>Converters\CollectionEmptyConverter.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Properties\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

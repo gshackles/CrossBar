@@ -13,6 +13,8 @@ using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
+using Cirrious.MvvmCross.Binding.Binders;
+using CrossBar.Platform.Converters;
 
 namespace CrossBar.UI.Touch
 {
@@ -56,6 +58,13 @@ namespace CrossBar.UI.Touch
 		protected override void InitializeDefaultTextSerializer()
 		{
 			Cirrious.MvvmCross.Plugins.Json.PluginLoader.Instance.EnsureLoaded(true);
+		}
+
+		protected override void FillValueConverters (Cirrious.MvvmCross.Binding.Interfaces.Binders.IMvxValueConverterRegistry registry)
+		{
+			base.FillValueConverters (registry);
+
+			registry.AddOrOverwrite ("CollectionEmptyConverter", new CollectionEmptyConverter());
 		}
 	}
 }

@@ -1,6 +1,7 @@
 using System;
 using CrossBar.Platform.Messaging;
-using Xamarin.Controls;
+using MonoTouch.UIKit;
+using CrossBar.UI.Touch.Extensions;
 
 namespace CrossBar.UI.Touch
 {
@@ -8,7 +9,8 @@ namespace CrossBar.UI.Touch
 	{
 		public void ReportError (string message)
 		{
-			AlertCenter.Default.PostMessage ("Error", message);
+			UIApplication.SharedApplication.InvokeOnMainThread(() =>
+				UIApplication.SharedApplication.KeyWindow.ShowMessage (message));
 		}
 	}
 }
