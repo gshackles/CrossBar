@@ -92,12 +92,14 @@
     <Reference Include="MBProgressHUD">
       <HintPath>..\..\Components\mbprogresshud-0.5.2\lib\ios\MBProgressHUD.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Extensions\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -122,6 +124,11 @@
     <Compile Include="Views\BrewerySearchView.cs" />
     <Compile Include="Views\BrewerySearchView.designer.cs">
       <DependentUpon>BrewerySearchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\FavoriteButtonImageConverter.cs" />
+    <Compile Include="Views\BeerView.cs" />
+    <Compile Include="Views\BeerView.designer.cs">
+      <DependentUpon>BeerView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -214,5 +221,6 @@
   <ItemGroup>
     <InterfaceDefinition Include="Views\FindBeersView.xib" />
     <InterfaceDefinition Include="Views\BrewerySearchView.xib" />
+    <InterfaceDefinition Include="Views\BeerView.xib" />
   </ItemGroup>
 </Project>

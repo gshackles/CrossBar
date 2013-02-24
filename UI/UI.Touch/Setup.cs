@@ -15,6 +15,10 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Binding.Binders;
 using CrossBar.Platform.Converters;
+using CrossBar.UI.Converters;
+using CrossBar.Platform.DataAccess.Repositories;
+using Cirrious.MvvmCross.Plugins.Sqlite;
+using Cirrious.MvvmCross.Plugins.Sqlite.Touch;
 
 namespace CrossBar.UI.Touch
 {
@@ -38,6 +42,8 @@ namespace CrossBar.UI.Touch
 			
 			this.RegisterServiceType<IErrorReporter, ErrorReporter>();
 			this.RegisterServiceInstance<IAmarilloClient>(client);
+            this.RegisterServiceType<ISQLiteConnectionFactory, MvxTouchSQLiteConnectionFactory>();
+            this.RegisterServiceType<IFavoriteBeerRepository, FavoriteBeerRepository>();
 			
 			ContainerBootstrapper.Initialize(this);
 		}
@@ -64,7 +70,8 @@ namespace CrossBar.UI.Touch
 		{
 			base.FillValueConverters (registry);
 
-			registry.AddOrOverwrite ("CollectionEmptyConverter", new CollectionEmptyConverter());
+			registry.AddOrOverwrite("CollectionEmptyConverter", new CollectionEmptyConverter());
+            registry.AddOrOverwrite("FavoriteButtonImageConverter", new FavoriteButtonImageConverter());
 		}
 	}
 }
