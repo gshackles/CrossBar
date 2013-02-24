@@ -119,6 +119,10 @@
     </Compile>
     <Compile Include="Extensions\ViewExensions.cs" />
     <Compile Include="Views\CommandTableViewSource.cs" />
+    <Compile Include="Views\BrewerySearchView.cs" />
+    <Compile Include="Views\BrewerySearchView.designer.cs">
+      <DependentUpon>BrewerySearchView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -193,7 +197,7 @@
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="mbprogresshud">
-      <InstallationInProgress>True</InstallationInProgress>
+      <InstallationInProgress>False</InstallationInProgress>
       <Version>0.5.2</Version>
       <Visible>False</Visible>
     </XamarinComponentReference>
@@ -209,5 +213,6 @@
   </ProjectExtensions>
   <ItemGroup>
     <InterfaceDefinition Include="Views\FindBeersView.xib" />
+    <InterfaceDefinition Include="Views\BrewerySearchView.xib" />
   </ItemGroup>
 </Project>
