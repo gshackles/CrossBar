@@ -10,6 +10,7 @@ using Cirrious.MvvmCross.Binding.Touch.ExtensionMethods;
 using System.Collections.Generic;
 using Cirrious.MvvmCross.Binding.Touch.Views;
 using System.Linq;
+using System.Windows.Input;
 
 namespace CrossBar.UI.Views
 {
@@ -27,37 +28,20 @@ namespace CrossBar.UI.Views
 
 			Title = "Find Beers";
 
-			var source = new MvxSimpleBindableTableViewSource (
-				Results, 
-                UITableViewCellStyle.Default, 
-                new NSString ("BeerCell"),
-                "TitleText Name",
-           		UITableViewCellAccessory.DisclosureIndicator);
-			
-			source.SelectionChanged += (sender, e) => 
-			{
-				ViewModel.SelectBeerCommand.Execute(e.AddedItems[0]);
-				Results.DeselectRow(Results.IndexPathForSelectedRow, true);
-			};
+			var source = new CommandTableViewSource (Results, "BeerCell", "TitleText Name", ViewModel.SelectBeerCommand);
+			Results.Source = source;
 
 			this.AddBindings (new Dictionary<object, string> ()
             {
 				{ Search, "TouchUpInside SearchCommand"}, 
-				{ Query, "Text Query"}, 
+				{ Query, "Text Query"},
 				{ source, "ItemsSource Beers"},
 				{ Results, "Hidden Beers, Converter=CollectionEmptyConverter" }
 			});
 
-			Query.ShouldReturn = field => 
-			{
-				ViewModel.SearchCommand.Execute(null);
-				return true;
-			};
-
+			Query.SetReturnCommand (ViewModel.SearchCommand);
 			ViewModel.BindLoadingMessage(View, model => model.IsSearching, "Searching...");
-			
-			Results.Source = source;
-			
+
 			ViewModel.PropertyChanged += (sender, e) =>
 			{
 				if (e.PropertyName == "IsSearching")

@@ -118,6 +118,7 @@
       <DependentUpon>FindBeersView.cs</DependentUpon>
     </Compile>
     <Compile Include="Extensions\ViewExensions.cs" />
+    <Compile Include="Views\CommandTableViewSource.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
