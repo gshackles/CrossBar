@@ -150,6 +150,22 @@
     <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Droid\Cirrious.MvvmCross.Plugins.WebBrowser.Droid.csproj">
+      <Project>{94ef5795-5912-4b3b-b255-63a6fec10f0d}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj">
+      <Project>{4dd71f8b-40df-4dc3-84b5-7a76722f1c67}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Amarillo\src\Amarillo.Droid\Amarillo.Droid.csproj">
+      <Project>{427d6331-e94d-4fde-bb88-f3631bd601fa}</Project>
+      <Name>Amarillo.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Droid\Cirrious.MvvmCross.Droid.csproj">
+      <Project>{7a6be137-d0f1-46a1-ae5c-81faeedddf02}</Project>
+      <Name>Cirrious.MvvmCross.Droid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
       <Project>{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
       <Name>Cirrious.MvvmCross</Name>
@@ -158,9 +174,17 @@
       <Project>{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Json</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Droid\Cirrious.MvvmCross.Plugins.Sqlite.Droid.csproj">
+      <Project>{e7909d1d-415a-4e35-8a08-8970ba605f2f}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite.Droid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
       <Project>{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\PortableSupport\System.Windows\System.Windows.Droid.csproj">
+      <Project>{72d13ee1-53a3-4a9f-9281-ae44cc5e92ac}</Project>
+      <Name>System.Windows.Droid</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

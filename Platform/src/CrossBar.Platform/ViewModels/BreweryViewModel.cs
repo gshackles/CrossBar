@@ -6,6 +6,7 @@ using CrossBar.Platform.DataAccess.Repositories;
 using CrossBar.Platform.Services;
 using CrossBar.Platform.ViewModels.Parameters;
 using TinyMessenger;
+using Cirrious.MvvmCross.Plugins.WebBrowser;
 
 namespace CrossBar.Platform.ViewModels
 {
@@ -13,13 +14,15 @@ namespace CrossBar.Platform.ViewModels
     {
         private readonly ISearchService _searchService;
         private readonly IFavoriteBreweryRepository _favoriteBreweryRepository;
+        private readonly IMvxWebBrowserTask _webBrowserTask;
         private FavoriteBrewery _favorite;
 
-        public BreweryViewModel(ITinyMessengerHub messengerHub, ISearchService searchService, IFavoriteBreweryRepository favoriteBreweryRepository)
+        public BreweryViewModel(ITinyMessengerHub messengerHub, ISearchService searchService, IFavoriteBreweryRepository favoriteBreweryRepository, IMvxWebBrowserTask webBrowserTask)
             : base(messengerHub)
         {
             _searchService = searchService;
             _favoriteBreweryRepository = favoriteBreweryRepository;
+            _webBrowserTask = webBrowserTask;
         }
 
         private Brewery _brewery;
@@ -46,6 +49,11 @@ namespace CrossBar.Platform.ViewModels
         public ICommand ToggleFavoriteCommand
         {
             get { return new MvxRelayCommand(toggleFavorite); }
+        }
+
+        public ICommand GoToBrewerySiteCommand
+        {
+            get { return new MvxRelayCommand(() => _webBrowserTask.ShowWebPage(Brewery.Url)); }
         }
 
         protected internal override void Initialize(BreweryParameters parameters)

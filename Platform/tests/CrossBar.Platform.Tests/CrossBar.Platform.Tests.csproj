@@ -55,6 +55,7 @@
     <Compile Include="Mocks\MockErrorReporter.cs" />
     <Compile Include="Mocks\MockMvxViewDispatcher.cs" />
     <Compile Include="Mocks\MockMvxViewDispatcherProvider.cs" />
+    <Compile Include="Mocks\MockMvxWebBrowserTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryTests\FavoriteBeerRepositoryTests.cs" />
@@ -96,6 +97,10 @@
       <Project>{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}</Project>
       <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj">
+      <Project>{4dd71f8b-40df-4dc3-84b5-7a76722f1c67}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\src\CrossBar.Platform\CrossBar.Platform.csproj">
       <Project>{FA91BBF7-184F-4A6F-B609-7E58C91A3387}</Project>
       <Name>CrossBar.Platform</Name>
@@ -116,9 +121,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ProjectExtensions>
     <MonoDevelop>
       <Properties>

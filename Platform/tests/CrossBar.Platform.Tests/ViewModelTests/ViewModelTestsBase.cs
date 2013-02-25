@@ -5,6 +5,7 @@ using Cirrious.MvvmCross.Interfaces.ServiceProvider;
 using Cirrious.MvvmCross.Interfaces.Views;
 using Cirrious.MvvmCross.Platform;
 using Cirrious.MvvmCross.Plugins.Json;
+using Cirrious.MvvmCross.Plugins.WebBrowser;
 using CrossBar.Platform.DataAccess.Repositories;
 using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
@@ -30,6 +31,7 @@ namespace CrossBar.Platform.Tests.ViewModelTests
         protected MockErrorReporter ErrorReporter { get; private set; }
         protected IFavoriteBeerRepository FavoriteBeerRepository { get; private set; }
         protected IFavoriteBreweryRepository FavoriteBreweryRepository { get; private set; }
+        protected MockMvxWebBrowserTask WebBrowserTask { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -64,6 +66,9 @@ namespace CrossBar.Platform.Tests.ViewModelTests
 
             MessengerHub = _container.GetService<ITinyMessengerHub>();
             MessengerHub.Subscribe<ErrorMessage>(msg => ErrorReporter.ReportError(msg.Message));
+
+            WebBrowserTask = new MockMvxWebBrowserTask();
+            _container.RegisterServiceInstance<IMvxWebBrowserTask>(WebBrowserTask);
         }
 
         protected TViewModel GetViewModel(TParameters parameters)

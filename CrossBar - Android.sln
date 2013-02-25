@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.Platform.Tests.Dro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amarillo.IntegrationTests.Droid", "Amarillo\tests\Amarillo.IntegrationTests.Droid\Amarillo.IntegrationTests.Droid.csproj", "{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser", "..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj", "{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser.Droid", "..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Droid\Cirrious.MvvmCross.Plugins.WebBrowser.Droid.csproj", "{94EF5795-5912-4B3B-B255-63A6FEC10F0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +77,14 @@ Global
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,5 +98,7 @@ Global
 		{E7909D1D-415A-4E35-8A08-8970BA605F2F} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{94EF5795-5912-4B3B-B255-63A6FEC10F0D} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 	EndGlobalSection
 EndGlobal

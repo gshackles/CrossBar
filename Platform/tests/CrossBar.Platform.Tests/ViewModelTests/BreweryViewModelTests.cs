@@ -67,6 +67,17 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             Assert.AreEqual(1, FavoriteBreweryRepository.ListFavoriteBreweries().Test().Count);
         }
 
+        [Test]
+        public void GoToBrewerySiteCommand_NavigatesToBrewerySite()
+        {
+            var viewModel = getTestViewModel();
+
+            viewModel.GoToBrewerySiteCommand.Execute(null);
+
+            Assert.AreEqual(1, WebBrowserTask.UrlRequests.Count);
+            Assert.AreEqual(viewModel.Brewery.Url, WebBrowserTask.UrlRequests.First());
+        }
+
         private BreweryViewModel getTestViewModel()
         {
             Client.GetBreweryAsyncResponse = () =>
@@ -85,7 +96,8 @@ namespace CrossBar.Platform.Tests.ViewModelTests
             return new Brewery
             {
                 Id = 42,
-                Name = "Duff"
+                Name = "Duff",
+                Url = "http://www.brewery.com"
             };
         }
     }

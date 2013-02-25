@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.Sqlite.Console", "MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Console\Cirrious.MvvmCross.Plugins.Sqlite.Console.csproj", "{BC3B3B7F-F2A9-4310-B310-A80948F4BF72}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser", "MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj", "{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BC3B3B7F-F2A9-4310-B310-A80948F4BF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3B3B7F-F2A9-4310-B310-A80948F4BF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3B3B7F-F2A9-4310-B310-A80948F4BF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +67,6 @@ Global
 		{A123E111-8008-4369-BF8C-3BFDE434D636} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{72654B8A-5F78-4BDF-BFBB-057DDDF314F1} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{BC3B3B7F-F2A9-4310-B310-A80948F4BF72} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 	EndGlobalSection
 EndGlobal
