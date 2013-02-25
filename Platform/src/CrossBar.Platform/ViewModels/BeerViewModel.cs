@@ -34,7 +34,7 @@ namespace CrossBar.Platform.ViewModels
         public bool IsFavorite
         {
             get { return _isFavorite; }
-            set { _isFavorite = value; RaisePropertyChanged(() => IsFavorite); Console.WriteLine("IsFavorite: " + _isFavorite); }
+            set { _isFavorite = value; RaisePropertyChanged(() => IsFavorite); }
         }
 
         private bool _favoriteOperationInProgress;

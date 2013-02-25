@@ -36,7 +36,7 @@ namespace CrossBar.UI.Touch.Views
 				new Section("Your Favorites")
 				{
 					createMenuItem("Beers", ViewModel.ViewFavoriteBeersCommand),
-					createMenuItem("Breweries", ViewModel.ViewFavoriteBeersCommand)
+					createMenuItem("Breweries", ViewModel.ViewFavoriteBreweriesCommand)
 				}
 			};
 		}

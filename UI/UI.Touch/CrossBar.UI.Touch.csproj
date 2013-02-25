@@ -99,7 +99,8 @@
     <Folder Include="Extensions\" />
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
-    <Folder Include="Converters\" />
+    <Folder Include="Bindings\" />
+    <Folder Include="Content\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -125,10 +126,16 @@
     <Compile Include="Views\BrewerySearchView.designer.cs">
       <DependentUpon>BrewerySearchView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Converters\FavoriteButtonImageConverter.cs" />
     <Compile Include="Views\BeerView.cs" />
     <Compile Include="Views\BeerView.designer.cs">
       <DependentUpon>BeerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bindings\FavoriteButtonBinding.cs" />
+    <Compile Include="Views\FavoriteBeersView.cs" />
+    <Compile Include="Views\FavoriteBreweriesView.cs" />
+    <Compile Include="Views\BreweryView.cs" />
+    <Compile Include="Views\BreweryView.designer.cs">
+      <DependentUpon>BreweryView.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -222,5 +229,12 @@
     <InterfaceDefinition Include="Views\FindBeersView.xib" />
     <InterfaceDefinition Include="Views\BrewerySearchView.xib" />
     <InterfaceDefinition Include="Views\BeerView.xib" />
+    <InterfaceDefinition Include="Views\BreweryView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\favorite_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\favorite_off.png" />
   </ItemGroup>
 </Project>

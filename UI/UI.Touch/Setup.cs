@@ -15,10 +15,11 @@ using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using Cirrious.MvvmCross.Binding.Binders;
 using CrossBar.Platform.Converters;
-using CrossBar.UI.Converters;
 using CrossBar.Platform.DataAccess.Repositories;
 using Cirrious.MvvmCross.Plugins.Sqlite;
 using Cirrious.MvvmCross.Plugins.Sqlite.Touch;
+using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
+using Bindings;
 
 namespace CrossBar.UI.Touch
 {
@@ -44,6 +45,7 @@ namespace CrossBar.UI.Touch
 			this.RegisterServiceInstance<IAmarilloClient>(client);
             this.RegisterServiceType<ISQLiteConnectionFactory, MvxTouchSQLiteConnectionFactory>();
             this.RegisterServiceType<IFavoriteBeerRepository, FavoriteBeerRepository>();
+            this.RegisterServiceType<IFavoriteBreweryRepository, FavoriteBreweryRepository>();
 			
 			ContainerBootstrapper.Initialize(this);
 		}
@@ -71,7 +73,13 @@ namespace CrossBar.UI.Touch
 			base.FillValueConverters (registry);
 
 			registry.AddOrOverwrite("CollectionEmptyConverter", new CollectionEmptyConverter());
-            registry.AddOrOverwrite("FavoriteButtonImageConverter", new FavoriteButtonImageConverter());
 		}
+
+        protected override void FillTargetFactories(Cirrious.MvvmCross.Binding.Interfaces.Bindings.Target.Construction.IMvxTargetBindingFactoryRegistry registry)
+        {
+            base.FillTargetFactories(registry);
+
+            registry.RegisterFactory(new MvxCustomBindingFactory<UIButton>("IsFavorite", button => new FavoriteButtonBinding(button)));
+        }
 	}
 }

@@ -30,8 +30,7 @@ namespace CrossBar.UI.Views
                 { Description, "Text Beer.Description" },
                 { ABV, "Text Beer.ABV" },
                 { BreweryName, "Title Beer.Brewery.Name; TouchUpInside SelectBreweryCommand" },
-                //{ Favorite, "CurrentImage IsFavorite, Converter=FavoriteButtonImageConverter; TouchUpInside ToggleFavoriteCommand" }
-                { Favorite, "Text IsFavorite; TouchUpInside ToggleFavoriteCommand" }
+                { Favorite, "IsFavorite IsFavorite; TouchUpInside ToggleFavoriteCommand" }
             });
         }
     }
