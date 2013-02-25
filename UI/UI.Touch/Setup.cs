@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using Amarillo;
 using Cirrious.MvvmCross.Application;
+using Cirrious.MvvmCross.Binding.Binders;
+using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
 using Cirrious.MvvmCross.Dialog.Touch;
 using Cirrious.MvvmCross.ExtensionMethods;
+using Cirrious.MvvmCross.Plugins.Sqlite;
+using Cirrious.MvvmCross.Plugins.Sqlite.Touch;
 using Cirrious.MvvmCross.Touch.Interfaces;
 using Cirrious.MvvmCross.Touch.Platform;
 using Cirrious.MvvmCross.Touch.Views.Presenters;
 using CrossBar.Platform;
+using CrossBar.Platform.Converters;
+using CrossBar.Platform.DataAccess.Repositories;
 using CrossBar.Platform.IoC;
 using CrossBar.Platform.Messaging;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
-using Cirrious.MvvmCross.Binding.Binders;
-using CrossBar.Platform.Converters;
-using CrossBar.Platform.DataAccess.Repositories;
-using Cirrious.MvvmCross.Plugins.Sqlite;
-using Cirrious.MvvmCross.Plugins.Sqlite.Touch;
-using Cirrious.MvvmCross.Binding.Bindings.Target.Construction;
-using Bindings;
+using CrossBar.UI.Bindings;
 
 namespace CrossBar.UI.Touch
 {
@@ -54,6 +54,7 @@ namespace CrossBar.UI.Touch
 		{
 			loaders.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.DownloadCache.Touch.Plugin>();
 			loaders.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.File.Touch.Plugin>();
+            loaders.AddConventionalPlugin<Cirrious.MvvmCross.Plugins.WebBrowser.Touch.Plugin>();
 			
 			base.AddPluginsLoaders (loaders);
 		}

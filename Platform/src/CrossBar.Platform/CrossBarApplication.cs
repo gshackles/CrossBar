@@ -21,6 +21,8 @@ namespace CrossBar.Platform
             var hub = this.GetService<ITinyMessengerHub>();
 
             hub.Subscribe<ErrorMessage>(msg => errorReporter.ReportError(msg.Message));
+
+            Cirrious.MvvmCross.Plugins.WebBrowser.PluginLoader.Instance.EnsureLoaded();
         }
 
         protected override IMvxViewModelLocator CreateDefaultViewModelLocator()

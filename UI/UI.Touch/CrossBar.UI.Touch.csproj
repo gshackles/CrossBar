@@ -208,6 +208,14 @@
       <Project>{5B8CF261-197A-48AF-BC7C-899CF81AA187}</Project>
       <Name>Cirrious.MvvmCross.Plugins.File.Touch</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj">
+      <Project>{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Touch\Cirrious.MvvmCross.Plugins.WebBrowser.Touch.csproj">
+      <Project>{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser.Touch</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="mbprogresshud">

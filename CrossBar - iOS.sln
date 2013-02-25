@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossUI.Core", "MvvmCross\C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossUI.Touch", "MvvmCross\CrossUI\CrossUI.Touch\CrossUI.Touch.csproj", "{371B2408-732A-40CA-8242-70DBC17F9825}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser", "MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj", "{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser.Touch", "MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Touch\Cirrious.MvvmCross.Plugins.WebBrowser.Touch.csproj", "{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.Platform.Touch", "Platform\src\CrossBar.Platform.Touch\CrossBar.Platform.Touch.csproj", "{646865A8-323C-426C-A1C7-8E39F692DB71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.Platform.Tests.Touch", "Platform\tests\CrossBar.Platform.Tests.Touch\CrossBar.Platform.Tests.Touch.csproj", "{B5D4EF0E-7309-4705-8721-FDC4720F94BD}"
@@ -119,6 +123,38 @@ Global
 		{4D6572A6-628A-4C50-9056-D3A9A42C8D7F}.Release|iPhone.Build.0 = Release|Any CPU
 		{4D6572A6-628A-4C50-9056-D3A9A42C8D7F}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{4D6572A6-628A-4C50-9056-D3A9A42C8D7F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|iPhone.Build.0 = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.AppStore|iPhone.ActiveCfg = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.AppStore|iPhone.Build.0 = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|iPhone.Build.0 = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{59452E25-103C-4677-AB2A-E0D33B9FBDDA}.Ad-Hoc|iPhone.ActiveCfg = Release|Any CPU
 		{59452E25-103C-4677-AB2A-E0D33B9FBDDA}.Ad-Hoc|iPhone.Build.0 = Release|Any CPU
 		{59452E25-103C-4677-AB2A-E0D33B9FBDDA}.AppStore|iPhone.ActiveCfg = Release|Any CPU
@@ -398,6 +434,8 @@ Global
 		{F073E4F8-E0B6-43E7-84C1-B71AE4BEA0E0} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{D9CBBFFE-57E8-4E97-9E16-C34BC4C52827} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{371B2408-732A-40CA-8242-70DBC17F9825} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = UI\UI.Touch\CrossBar.UI.Touch.csproj

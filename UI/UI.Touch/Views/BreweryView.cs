@@ -26,7 +26,7 @@ namespace Views
             this.AddBindings(new Dictionary<object, string> ()
             {
                 { Name, "Text Brewery.Name" },
-                { Url, "Title Brewery.Url" },
+                { Url, "Title Brewery.Url; TouchUpInside GoToBrewerySiteCommand" },
                 { Favorite, "IsFavorite IsFavorite; TouchUpInside ToggleFavoriteCommand" }
             });
         }

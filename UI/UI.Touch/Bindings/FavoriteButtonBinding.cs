@@ -1,15 +1,13 @@
-
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 using MonoTouch.Dialog;
 using Cirrious.MvvmCross.Binding.Bindings.Target;
 using Cirrious.MvvmCross.Binding.Interfaces;
 
-namespace Bindings
+namespace CrossBar.UI.Bindings
 {
     public class FavoriteButtonBinding : MvxBaseTargetBinding
     {
