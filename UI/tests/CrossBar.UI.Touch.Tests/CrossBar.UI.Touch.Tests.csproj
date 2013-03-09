@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>12.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AD2E3C2F-95BD-4F28-A918-D616D14A14FE}</ProjectGuid>
+    <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>CrossBar.UI.Touch.Tests</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>CrossBarUITouchTests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchDebug>True</MtouchDebug>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>True</MtouchDebug>
+    <ConsolePause>False</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Developer</CodesignKey>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Ad-Hoc|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <BuildIpa>True</BuildIpa>
+    <CodesignProvision>Automatic:AdHoc</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AppStore|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.Dialog-1" />
+    <Reference Include="MBProgressHUD">
+      <HintPath>..\..\..\Components\mbprogresshud-0.5.2\lib\ios\MBProgressHUD.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="frank_static_resources.bundle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Compile Include="..\..\UI.Touch\AppDelegate.cs">
+      <Link>AppDelegate.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\ErrorReporter.cs">
+      <Link>ErrorReporter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Main.cs">
+      <Link>Main.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Setup.cs">
+      <Link>Setup.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Bindings\FavoriteButtonBinding.cs">
+      <Link>Bindings\FavoriteButtonBinding.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Controllers\DialogViewControllerBase.cs">
+      <Link>Controllers\DialogViewControllerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Controllers\TableViewControllerBase.cs">
+      <Link>Controllers\TableViewControllerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Controllers\ViewControllerBase.cs">
+      <Link>Controllers\ViewControllerBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Converters\FavoriteButtonImageConverter.cs">
+      <Link>Converters\FavoriteButtonImageConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Extensions\ViewControllerExtensions.cs">
+      <Link>Extensions\ViewControllerExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Extensions\ViewExensions.cs">
+      <Link>Extensions\ViewExensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Extensions\ViewModelExtensions.cs">
+      <Link>Extensions\ViewModelExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BeerView.cs">
+      <Link>Views\BeerView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BeerView.designer.cs">
+      <Link>Views\BeerView.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BrewerySearchView.cs">
+      <Link>Views\BrewerySearchView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BrewerySearchView.designer.cs">
+      <Link>Views\BrewerySearchView.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BreweryView.cs">
+      <Link>Views\BreweryView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\BreweryView.designer.cs">
+      <Link>Views\BreweryView.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\CommandTableViewSource.cs">
+      <Link>Views\CommandTableViewSource.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\FavoriteBeersView.cs">
+      <Link>Views\FavoriteBeersView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\FavoriteBreweriesView.cs">
+      <Link>Views\FavoriteBreweriesView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\FindBeersView.cs">
+      <Link>Views\FindBeersView.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\FindBeersView.designer.cs">
+      <Link>Views\FindBeersView.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\..\UI.Touch\Views\MainMenuView.cs">
+      <Link>Views\MainMenuView.cs</Link>
+    </Compile>
+    <Compile Include="ForceFrankBinding.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="..\..\UI.Touch\Content\favorite_off.png">
+      <Link>Content\favorite_off.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\..\UI.Touch\Content\favorite_on.png">
+      <Link>Content\favorite_on.png</Link>
+    </BundleResource>
+    <BundleResource Include="frank_static_resources.bundle\ViewAttributeMapping.plist" />
+    <BundleResource Include="frank_static_resources.bundle\ViewAttributeMappingMac.plist" />
+    <BundleResource Include="frank_static_resources.bundle\index.html" />
+    <BundleResource Include="frank_static_resources.bundle\index.html.haml" />
+    <BundleResource Include="frank_static_resources.bundle\images\ajax-loader.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\file.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\folder-closed.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\folder.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\loader.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\loader.png" />
+    <BundleResource Include="frank_static_resources.bundle\images\minus.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\plus.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-black-line.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-black.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-default-line.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-default.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-famfamfam-line.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-famfamfam.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-gray-line.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-gray.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-red-line.gif" />
+    <BundleResource Include="frank_static_resources.bundle\images\treeview-red.gif" />
+    <BundleResource Include="frank_static_resources.bundle\js\accessible_views_view.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\accessible_views_view.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\controller.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\controller.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\details_view.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\details_view.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\dropdown_control.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\dropdown_control.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\ersatz_model.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\ersatz_model.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\ersatz_view.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\ersatz_view.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\experiment_bar_model.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\experiment_bar_model.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\experiment_bar_view.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\experiment_bar_view.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\frank.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\frank.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\main.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\main.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\tabs_controller.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\tabs_controller.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\toast_controller.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\toast_controller.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\transform_stack.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\transform_stack.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\tree_view.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\tree_view.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\view_hier_model.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\view_hier_model.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\view_model.coffee" />
+    <BundleResource Include="frank_static_resources.bundle\js\view_model.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\backbone.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\coffee-script.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\jquery-ui.min.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\jquery.min.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\jquery.treeview.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\json2.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\raphael.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\require.js" />
+    <BundleResource Include="frank_static_resources.bundle\js\lib\underscore.js" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\index.html" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos-web.eot" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos-web.svg" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos-web.ttf" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos-web.woff" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos.css" />
+    <BundleResource Include="frank_static_resources.bundle\pictos\pictos_base64.css" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\css\symbiote.css" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_elements.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_header.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_inspect_tabs_list_tabs.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_jquery.treeview.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_jqui.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_layout.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_mixins.sass" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_reset.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_selector_test_toolbar.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_solarized.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_typography.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_unicode.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\_z_index.scss" />
+    <BundleResource Include="frank_static_resources.bundle\stylesheets\sass\symbiote.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="..\..\UI.Touch\Views\BeerView.xib">
+      <Link>Views\BeerView.xib</Link>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="..\..\UI.Touch\Views\BrewerySearchView.xib">
+      <Link>Views\BrewerySearchView.xib</Link>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="..\..\UI.Touch\Views\BreweryView.xib">
+      <Link>Views\BreweryView.xib</Link>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="..\..\UI.Touch\Views\FindBeersView.xib">
+      <Link>Views\FindBeersView.xib</Link>
+    </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Amarillo\src\Amarillo.Touch\Amarillo.Touch.csproj">
+      <Project>{6D1E98EE-10C8-4292-B00A-ADFA10BB5882}</Project>
+      <Name>Amarillo.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross\Cirrious.MvvmCross.csproj">
+      <Project>{B6E27475-E7D0-448C-A5CC-5097DCA1E2DD}</Project>
+      <Name>Cirrious.MvvmCross</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj">
+      <Project>{64DCD397-9019-41E8-A928-E5F5C5DF185B}</Project>
+      <Name>Cirrious.MvvmCross.Binding</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Binding.Touch\Cirrious.MvvmCross.Binding.Touch.csproj">
+      <Project>{913B13B5-7B2C-4DDA-BECB-DADC827ED895}</Project>
+      <Name>Cirrious.MvvmCross.Binding.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Dialog.Touch\Cirrious.MvvmCross.Dialog.Touch.csproj">
+      <Project>{F073E4F8-E0B6-43E7-84C1-B71AE4BEA0E0}</Project>
+      <Name>Cirrious.MvvmCross.Dialog.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.csproj">
+      <Project>{60A80EB8-2056-4771-8600-03A8DA417CFB}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.DownloadCache</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.Touch\Cirrious.MvvmCross.Plugins.DownloadCache.Touch.csproj">
+      <Project>{59452E25-103C-4677-AB2A-E0D33B9FBDDA}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.DownloadCache.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj">
+      <Project>{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.File</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File.Touch\Cirrious.MvvmCross.Plugins.File.Touch.csproj">
+      <Project>{5B8CF261-197A-48AF-BC7C-899CF81AA187}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.File.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Json\Cirrious.MvvmCross.Plugins.Json\Cirrious.MvvmCross.Plugins.Json.csproj">
+      <Project>{D518E8E6-3CE6-4706-A286-E8BC6A2F64DC}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Json</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.csproj">
+      <Project>{72654B8A-5F78-4BDF-BFBB-057DDDF314F1}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\Sqlite\Cirrious.MvvmCross.Plugins.Sqlite.Touch\Cirrious.MvvmCross.Plugins.Sqlite.Touch.csproj">
+      <Project>{4D6572A6-628A-4C50-9056-D3A9A42C8D7F}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.Sqlite.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.csproj">
+      <Project>{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Touch\Cirrious.MvvmCross.Plugins.WebBrowser.Touch.csproj">
+      <Project>{4E79D6B0-ADB9-4470-AB5D-CABFBE73F97D}</Project>
+      <Name>Cirrious.MvvmCross.Plugins.WebBrowser.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\Cirrious\Cirrious.MvvmCross.Touch\Cirrious.MvvmCross.Touch.csproj">
+      <Project>{E042EDD9-E89D-4928-BF4D-27F0FC29CEDA}</Project>
+      <Name>Cirrious.MvvmCross.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Platform\src\CrossBar.Platform.Touch\CrossBar.Platform.Touch.csproj">
+      <Project>{646865A8-323C-426C-A1C7-8E39F692DB71}</Project>
+      <Name>CrossBar.Platform.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\CrossUI\CrossUI.Core\CrossUI.Core.csproj">
+      <Project>{D9CBBFFE-57E8-4E97-9E16-C34BC4C52827}</Project>
+      <Name>CrossUI.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\CrossUI\CrossUI.Touch\CrossUI.Touch.csproj">
+      <Project>{371B2408-732A-40CA-8242-70DBC17F9825}</Project>
+      <Name>CrossUI.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MvvmCross\PortableSupport\System.Windows.Touch\System.Windows.Touch.csproj">
+      <Project>{9499E72B-FD7C-4A9B-AB6C-0F9B7359257C}</Project>
+      <Name>System.Windows.Touch</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrankBinding\FrankBinding.csproj">
+      <Project>{92D2E889-02F8-427E-95C7-6947DE74DBC3}</Project>
+      <Name>FrankBinding</Name>
+    </ProjectReference>
+  </ItemGroup>
+</Project>

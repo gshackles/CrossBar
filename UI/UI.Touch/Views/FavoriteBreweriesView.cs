@@ -17,6 +17,8 @@ namespace CrossBar.UI.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
+
+            Title = "Favorite Breweries";
             
             var source = new CommandTableViewSource(TableView,
                                                     "FavoriteBreweryCell",

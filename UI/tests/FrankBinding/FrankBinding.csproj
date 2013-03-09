@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92D2E889-02F8-427E-95C7-6947DE74DBC3}</ProjectGuid>
+    <ProjectTypeGuids>{F5B4F3BC-B597-4E2B-B552-EF5D8A32436F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FrankBinding</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>FrankBinding</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>False</ConsolePause>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="monotouch" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="libCocoaAsyncSocket.a" />
+    <ObjcBindingNativeLibrary Include="libCocoaAsyncSocketMac.a" />
+    <ObjcBindingNativeLibrary Include="libCocoaHTTPServer.a" />
+    <ObjcBindingNativeLibrary Include="libCocoaHTTPServerMac.a" />
+    <ObjcBindingNativeLibrary Include="libCocoaLumberjack.a" />
+    <ObjcBindingNativeLibrary Include="libCocoaLumberjackMac.a" />
+    <ObjcBindingNativeLibrary Include="libFrank.a" />
+    <ObjcBindingNativeLibrary Include="libFrankMac.a" />
+    <ObjcBindingNativeLibrary Include="libShelley.a" />
+    <ObjcBindingNativeLibrary Include="libShelleyMac.a" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="libCocoaAsyncSocket.linkwith.cs">
+      <DependentUpon>libCocoaAsyncSocket.a</DependentUpon>
+    </Compile>
+    <Compile Include="libCocoaAsyncSocketMac.linkwith.cs">
+      <DependentUpon>libCocoaAsyncSocketMac.a</DependentUpon>
+    </Compile>
+    <Compile Include="libCocoaHTTPServer.linkwith.cs">
+      <DependentUpon>libCocoaHTTPServer.a</DependentUpon>
+    </Compile>
+    <Compile Include="libCocoaHTTPServerMac.linkwith.cs">
+      <DependentUpon>libCocoaHTTPServerMac.a</DependentUpon>
+    </Compile>
+    <Compile Include="libCocoaLumberjack.linkwith.cs">
+      <DependentUpon>libCocoaLumberjack.a</DependentUpon>
+    </Compile>
+    <Compile Include="libCocoaLumberjackMac.linkwith.cs">
+      <DependentUpon>libCocoaLumberjackMac.a</DependentUpon>
+    </Compile>
+    <Compile Include="libFrank.linkwith.cs">
+      <DependentUpon>libFrank.a</DependentUpon>
+    </Compile>
+    <Compile Include="libFrankMac.linkwith.cs">
+      <DependentUpon>libFrankMac.a</DependentUpon>
+    </Compile>
+    <Compile Include="libShelley.linkwith.cs">
+      <DependentUpon>libShelley.a</DependentUpon>
+    </Compile>
+    <Compile Include="libShelleyMac.linkwith.cs">
+      <DependentUpon>libShelleyMac.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>
