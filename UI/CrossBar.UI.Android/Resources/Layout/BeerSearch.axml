@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvx="http://schemas.android.com/apk/res/com.gregshackles.crossbar"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Text Query" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Find Beers"
+        mvx:MvxBind="Click SearchCommand" />
+    <Mvx.MvxBindableListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        mvx:MvxBind="ItemsSource Beers; ItemClick SelectBeerCommand"
+        mvx:MvxItemTemplate="@layout/beersearchresult" />
+</LinearLayout>

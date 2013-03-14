@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvx="http://schemas.android.com/apk/res/com.gregshackles.crossbar"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Beer Name"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Text Beer.Name" />
+    <TextView
+        android:text="Brewery Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Text Beer.Brewery.Name; Click SelectBreweryCommand" />
+    <TextView
+        android:text="ABV"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Text Beer.ABV" />
+    <TextView
+        android:text="Description"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Text Beer.Description" />
+</LinearLayout>

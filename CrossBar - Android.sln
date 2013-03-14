@@ -27,6 +27,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.WebBrowser.Droid", "..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Droid\Cirrious.MvvmCross.Plugins.WebBrowser.Droid.csproj", "{94EF5795-5912-4B3B-B255-63A6FEC10F0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossBar.UI.Android", "UI\CrossBar.UI.Android\CrossBar.UI.Android.csproj", "{B72A4856-9E93-4F8B-ABE1-B8696775625F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Binding", "MvvmCross\Cirrious\Cirrious.MvvmCross.Binding\Cirrious.MvvmCross.Binding.csproj", "{64DCD397-9019-41E8-A928-E5F5C5DF185B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Binding.Droid", "MvvmCross\Cirrious\Cirrious.MvvmCross.Binding.Droid\Cirrious.MvvmCross.Binding.Droid.csproj", "{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.DownloadCache", "MvvmCross\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.csproj", "{60A80EB8-2056-4771-8600-03A8DA417CFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.DownloadCache.Droid", "MvvmCross\Cirrious\Plugins\DownloadCache\Cirrious.MvvmCross.Plugins.DownloadCache.Droid\Cirrious.MvvmCross.Plugins.DownloadCache.Droid.csproj", "{81A58551-7D1C-4687-A5A5-C73EB5F15563}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.File", "MvvmCross\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File\Cirrious.MvvmCross.Plugins.File.csproj", "{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Plugins.File.Droid", "MvvmCross\Cirrious\Plugins\File\Cirrious.MvvmCross.Plugins.File.Droid\Cirrious.MvvmCross.Plugins.File.Droid.csproj", "{EE2D94C9-032E-4EBE-B3D5-6A585D03F188}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cirrious.MvvmCross.Localization", "MvvmCross\Cirrious\Cirrious.MvvmCross.Localisation\Cirrious.MvvmCross.Localization.csproj", "{D89351C1-D48F-4AD0-A0B9-353A93425AB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "System.Net.Droid", "..\MvvmCross\PortableSupport\System.Net\System.Net.Droid.csproj", "{EB2591F7-1492-4885-AD59-D11D2311BBC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,13 +85,11 @@ Global
 		{72D13EE1-53A3-4A9F-9281-AE44CC5E92AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F308F314-494A-4C0E-8B70-0227A3DBBE99}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3}.Release|Any CPU.Deploy.0 = Release|Any CPU
@@ -85,6 +101,44 @@ Global
 		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94EF5795-5912-4B3B-B255-63A6FEC10F0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B72A4856-9E93-4F8B-ABE1-B8696775625F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{64DCD397-9019-41E8-A928-E5F5C5DF185B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64DCD397-9019-41E8-A928-E5F5C5DF185B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64DCD397-9019-41E8-A928-E5F5C5DF185B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64DCD397-9019-41E8-A928-E5F5C5DF185B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60A80EB8-2056-4771-8600-03A8DA417CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60A80EB8-2056-4771-8600-03A8DA417CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60A80EB8-2056-4771-8600-03A8DA417CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60A80EB8-2056-4771-8600-03A8DA417CFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81A58551-7D1C-4687-A5A5-C73EB5F15563}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81A58551-7D1C-4687-A5A5-C73EB5F15563}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81A58551-7D1C-4687-A5A5-C73EB5F15563}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81A58551-7D1C-4687-A5A5-C73EB5F15563}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19EE04D6-7EE0-4FE8-AB10-4623D93F165A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2D94C9-032E-4EBE-B3D5-6A585D03F188}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2D94C9-032E-4EBE-B3D5-6A585D03F188}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2D94C9-032E-4EBE-B3D5-6A585D03F188}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2D94C9-032E-4EBE-B3D5-6A585D03F188}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D89351C1-D48F-4AD0-A0B9-353A93425AB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89351C1-D48F-4AD0-A0B9-353A93425AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89351C1-D48F-4AD0-A0B9-353A93425AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89351C1-D48F-4AD0-A0B9-353A93425AB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB2591F7-1492-4885-AD59-D11D2311BBC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB2591F7-1492-4885-AD59-D11D2311BBC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB2591F7-1492-4885-AD59-D11D2311BBC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB2591F7-1492-4885-AD59-D11D2311BBC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -100,5 +154,13 @@ Global
 		{8A180460-ADCE-4977-9025-F3A2CBCBA0A3} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{4DD71F8B-40DF-4DC3-84B5-7A76722F1C67} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 		{94EF5795-5912-4B3B-B255-63A6FEC10F0D} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{64DCD397-9019-41E8-A928-E5F5C5DF185B} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{47FD89C3-19DC-4BD2-9B6D-FB8363BE7EB9} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{60A80EB8-2056-4771-8600-03A8DA417CFB} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{81A58551-7D1C-4687-A5A5-C73EB5F15563} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{19EE04D6-7EE0-4FE8-AB10-4623D93F165A} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{EE2D94C9-032E-4EBE-B3D5-6A585D03F188} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{D89351C1-D48F-4AD0-A0B9-353A93425AB7} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
+		{EB2591F7-1492-4885-AD59-D11D2311BBC7} = {C4EC3FF9-3E63-4B9C-8EFC-E89DAB10B165}
 	EndGlobalSection
 EndGlobal

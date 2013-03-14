@@ -26,10 +26,6 @@ namespace CrossBar.Platform.Tests.Droid
 		
 		public static void UpdateIdValues()
 		{
-			Amarillo.Droid.Resource.String.ApplicationName = CrossBar.Platform.Tests.Droid.Resource.String.ApplicationName;
-			Amarillo.Droid.Resource.String.Hello = CrossBar.Platform.Tests.Droid.Resource.String.Hello;
-			CrossBar.Platform.Droid.Resource.String.ApplicationName = CrossBar.Platform.Tests.Droid.Resource.String.ApplicationName;
-			CrossBar.Platform.Droid.Resource.String.Hello = CrossBar.Platform.Tests.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute

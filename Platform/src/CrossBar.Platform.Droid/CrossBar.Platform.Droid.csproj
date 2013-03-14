@@ -147,9 +147,6 @@
     <None Include="Resources\AboutResources.txt" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\..\..\..\MvvmCross\Cirrious\Plugins\WebBrowser\Cirrious.MvvmCross.Plugins.WebBrowser.Droid\Cirrious.MvvmCross.Plugins.WebBrowser.Droid.csproj">
       <Project>{94ef5795-5912-4b3b-b255-63a6fec10f0d}</Project>
       <Name>Cirrious.MvvmCross.Plugins.WebBrowser.Droid</Name>
@@ -186,6 +183,9 @@
       <Project>{72d13ee1-53a3-4a9f-9281-ae44cc5e92ac}</Project>
       <Name>System.Windows.Droid</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Values\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

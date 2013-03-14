@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mvx="http://schemas.android.com/apk/res/com.gregshackles.crossbar"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Search For:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp" />
+    <Button
+        android:text="Beers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Click FindBeersCommand" />
+    <Button
+        android:text="Breweries"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Click FindBreweriesCommand" />
+    <TextView
+        android:text="Your Favorites:"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp" />
+    <Button
+        android:text="Beers"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Click ViewFavoriteBeersCommand" />
+    <Button
+        android:text="Breweries"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        mvx:MvxBind="Click ViewFavoriteBreweriesCommand" />
+</LinearLayout>
